@@ -981,21 +981,6 @@ div > b {
   position: relative;
 }
 
-.form-input:focus {
-  border: 1px solid var(--acent-color);
-  outline: none;
-}
-
-.form-input:focus + .form-icon {
-  fill: var(--acent-color);
-}
-
-.form-icon {
-  position: absolute;
-  top: 11px;
-  left: 12px;
-}
-
 .form-input {
   display: block;
   width: 100%;
@@ -1013,7 +998,26 @@ div > b {
   border-radius: 4px;
 
   cursor: pointer;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.form-icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus {
+  border: 1px solid var(--acent-color);
+  outline: none;
+}
+
+.form-input:focus + .form-icon {
+  fill: var(--acent-color);
+}
+
 .text-aria {
   display: block;
   width: 100%;
@@ -1032,6 +1036,7 @@ div > b {
   border-radius: 4px;
 
   cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-aria:focus {
@@ -1098,10 +1103,37 @@ form button:hover {
 .label-checkbox {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
-.icon-box {
+.check-text {
+  display: inline-flex;
+  align-items: center;
+}
+
+.check-text::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 1.5px solid #212121;
+  border-radius: 2px;
+
+  margin-right: 8px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check-box:checked + .check-text::before {
+  background-size: contain;
+  background-origin: border-box;
+  border-color: transparent;
+  background-color: var(--acent-color);
+  background-image: url(../img-main/icon-check.svg);
+}
+
+/* .icon-box {
   display: inline-block;
   margin-right: 8px;
   width: 16px;
@@ -1116,7 +1148,7 @@ form button:hover {
   border-color: transparent;
   background-color: var(--acent-color);
   background-image: url(../img-main/icon-check.svg);
-}
+} */
 
 .check-box {
   position: absolute !important;

@@ -693,7 +693,7 @@ div > b {
 }
 
 .sign-flex {
-  display: flex;
+  display: inline-flex;
 }
 
 .sign-mail {

@@ -330,12 +330,22 @@
         </div>
         <div class="foot-item subscribe">
           <b>Подпишитесь на рассылку</b>
-          <a href="" class="button sign">
-            Подписться
-            <svg class="item-sign">
-              <use xlink:href="./img-main/sprite.svg#plane"></use>
-            </svg>
-          </a>
+          <div>
+            <form class="sign-flex" autocomplete="off">
+              <input
+                class="sign-mail"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+              />
+              <button type="submit" class="button sign">
+                Подписться
+                <svg class="item-sign">
+                  <use xlink:href="./img-main/sprite.svg#plane"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </footer>

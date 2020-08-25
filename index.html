@@ -436,21 +436,21 @@
         </div>
         <div class="foot-item subscribe">
           <b>Подпишитесь на рассылку</b>
-          <div class="sign-flex">
-            <form action="" autocomplete="off">
+          <div>
+            <form class="sign-flex" autocomplete="off">
               <input
                 class="sign-mail"
                 type="email"
                 name="email"
                 placeholder="E-mail"
               />
+              <button type="submit" class="button sign">
+                Подписться
+                <svg class="item-sign">
+                  <use xlink:href="./img-main/sprite.svg#plane"></use>
+                </svg>
+              </button>
             </form>
-            <a href="" class="button sign">
-              Подписться
-              <svg class="item-sign">
-                <use xlink:href="./img-main/sprite.svg#plane"></use>
-              </svg>
-            </a>
           </div>
         </div>
       </div>
@@ -514,7 +514,6 @@
                 name="checkbox"
                 value="cssdaedwe"
               />
-              <!-- <span class="icon-box"></span> -->
               <span class="check-text">
                 Соглашаюсь с рассылкой и принимаю
                 <a href="#">Условия договора</a>
